@@ -23,6 +23,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var patientez: UILabel!
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var picker: UIPickerView!
+    @IBOutlet weak var btnSave: UIButton!
     
     
     
@@ -48,8 +49,16 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
         self.waitMessage(status: true)
         
+        self.btnSave.addTarget(self, action: #selector(saveImage), for: .touchUpInside)
     }
-
+    
+    @objc func saveImage() {
+        UIImageWriteToSavedPhotosAlbum(self.image.image!, self, nil, nil)
+        let alert = UIAlertController(title: "GREAT !", message: "Photo sauvegardée", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "ok", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
