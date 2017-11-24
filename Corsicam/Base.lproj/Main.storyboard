@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,78 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Corsicam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yak-ch-R4d">
+                                <rect key="frame" x="16" y="58" width="343" height="365"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patientez" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbY-Sw-foG">
+                                <rect key="frame" x="151" y="256" width="72" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="EbS-2W-ndD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Wb1-GM-glI">
+                                <rect key="frame" x="177" y="206" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="irj-Kl-WRk"/>
+                                    <constraint firstAttribute="width" constant="20" id="n8n-i4-8bM"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KHy-qk-3KR">
+                                <rect key="frame" x="16" y="431" width="343" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMX-0B-RRw">
+                                <rect key="frame" x="16" y="20" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="fYD-dX-KYi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YbY-Sw-foG" firstAttribute="top" secondItem="Wb1-GM-glI" secondAttribute="bottom" constant="30" id="4Da-8x-AEt"/>
+                            <constraint firstItem="mMX-0B-RRw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4g7-sJ-8Lr"/>
+                            <constraint firstItem="KHy-qk-3KR" firstAttribute="top" secondItem="Yak-ch-R4d" secondAttribute="bottom" constant="8" id="Atc-jW-EAc"/>
+                            <constraint firstItem="YbY-Sw-foG" firstAttribute="top" secondItem="Wb1-GM-glI" secondAttribute="bottom" constant="30" id="E7q-sI-2BW"/>
+                            <constraint firstItem="KHy-qk-3KR" firstAttribute="top" secondItem="Yak-ch-R4d" secondAttribute="bottom" constant="8" id="Hzz-Nl-rX6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KHy-qk-3KR" secondAttribute="trailing" constant="16" id="IZh-R1-Nb0"/>
+                            <constraint firstItem="Wb1-GM-glI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="177" id="JCF-5r-iCg"/>
+                            <constraint firstItem="Yak-ch-R4d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Kpd-PX-BCs"/>
+                            <constraint firstItem="Yak-ch-R4d" firstAttribute="top" secondItem="mMX-0B-RRw" secondAttribute="bottom" constant="17" id="O0b-gQ-SZR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yak-ch-R4d" secondAttribute="trailing" constant="16" id="Pht-Ws-EoP"/>
+                            <constraint firstItem="Wb1-GM-glI" firstAttribute="top" secondItem="mMX-0B-RRw" secondAttribute="bottom" constant="165" id="Q4O-ph-t3v"/>
+                            <constraint firstItem="mMX-0B-RRw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="RaD-pc-NzY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KHy-qk-3KR" secondAttribute="bottom" constant="20" id="WOT-kd-ZzF"/>
+                            <constraint firstItem="KHy-qk-3KR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="cPf-sn-cXG"/>
+                            <constraint firstItem="KHy-qk-3KR" firstAttribute="top" secondItem="YbY-Sw-foG" secondAttribute="bottom" constant="154" id="n8i-gn-PYa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mMX-0B-RRw" secondAttribute="trailing" constant="16" id="nky-hk-evU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YbY-Sw-foG" secondAttribute="trailing" constant="152" id="odp-xp-8Ud"/>
+                            <constraint firstItem="YbY-Sw-foG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="151" id="uIp-J1-dVn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wb1-GM-glI" secondAttribute="trailing" constant="178" id="zAp-Lp-SuS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="image" destination="Yak-ch-R4d" id="mka-L6-50k"/>
+                        <outlet property="indicator" destination="Wb1-GM-glI" id="136-ta-xmw"/>
+                        <outlet property="patientez" destination="YbY-Sw-foG" id="u70-yC-Q1V"/>
+                        <outlet property="picker" destination="KHy-qk-3KR" id="IIt-GO-YJe"/>
+                        <outlet property="titre" destination="mMX-0B-RRw" id="m5B-gC-u5q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.5" y="132.5"/>
         </scene>
     </scenes>
 </document>
